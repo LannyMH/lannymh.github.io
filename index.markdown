@@ -12,5 +12,6 @@ layout: page
 
 ## To-Do
 
-1. Add Local Comment Provider!
-2. Add other Nav pages
+- Add Local Comment Provider!
+- Add Archive page
+- Add side bar archive

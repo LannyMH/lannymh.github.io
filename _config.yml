@@ -2,11 +2,12 @@
 title: Let's Code!
 email: mh_lan@icloud.com
 description: > # this means to ignore newlines until "baseurl:"
-  This is a blog site created by MH Lan
+  This is a blog site created based on Jekyll and Bootstrap.<br/><br/>
+  Maintained by MH Lan.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://lannymh.github.io" # the base hostname & protocol for your site
 twitter_username: 
-github_username:  LanntMH
+github_username:  LannyMH
 
 # Build settings
 markdown: kramdown
