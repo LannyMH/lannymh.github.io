@@ -12,7 +12,7 @@ $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
-
+$list-spacing-unit:10px;  
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
@@ -41,7 +41,6 @@ $on-laptop:        800px;
         @content;
     }
 }
-
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
