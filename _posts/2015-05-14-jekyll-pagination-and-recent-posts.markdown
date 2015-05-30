@@ -5,7 +5,9 @@ date:   2015-05-14
 tags: ['Jekyll','Liquid']
 ---
 
-Jekyll有内置分页功能, [Jekyll Pagination Docs][jekyll-pg].
+Jekyll有内置分页功能, 请参考其官方文档。
+
+[Jekyll Pagination Docs][jekyll-pg].
 
 [jekyll-pg]: http://jekyllrb.com/docs/pagination/
 
