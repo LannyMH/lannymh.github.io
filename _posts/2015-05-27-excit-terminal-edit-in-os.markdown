@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Excit Terminal Edit in OS
+date:   2015-05-27
+categories : [OS Tips]
+tags : [OS Tips]
 ---
 
-
-##OS Terminal 退出编辑模式
-
-在Terminal中编辑文件，比如HOSTS，按一下步骤退出编辑:
+在Terminal中编辑文件，比如Hosts，退出编辑模式的命令
 
 Press Esc >> Shift + : >> enter wq >> press enter button

@@ -1,17 +1,13 @@
 ---
 layout: page
+title : Archive
 ---
 
-## Blog Posts
+{% assign posts_collate = site.posts %}
+{% include JB/posts_collate %}
 
-<ul class="post-list">
+<!-- <ul class="post-list">
   {% for post in site.posts %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
-</ul>
-
-## To-Do
-
-- Add Local Comment Provider!
-- Add Archive page
-- Add side bar archive
+</ul> -->

@@ -12,16 +12,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-blog">
       <ul class="nav navbar-nav">
-        <li><a href="{{ site.baseurl }}/">Home</a></li>
-        <li><a href="123.html">Archive</a></li>
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Tags</a></li>
         {% for page in site.pages %}
           {% if page.title %}
-           <li> <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+           <li> <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
           {% endif %}
         {% endfor %}
-       
+
       </ul>
      <!--  <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
