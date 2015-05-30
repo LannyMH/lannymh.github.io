@@ -7,6 +7,10 @@ tags: ['Liquid','Jekyll']
 
 一些使用Jekyll与Liquid的Tips。
 
+[Liquid Docs][Liquid]
+
+[Liquid]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+
 在Post中高亮代码:
 
 {% highlight liquid %}

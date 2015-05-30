@@ -12,6 +12,11 @@
   }
 }
 
+/*pagination text*/
+.page_number{
+  margin-left: 5px;
+}
+
 /* Sidebar modules for boxing content */
 .sidebar-module {
   padding: 15px;
