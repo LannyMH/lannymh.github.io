@@ -72,4 +72,4 @@ tags: ['Jekyll','Liquid']
 2) Next make sure to change 'post.previous.date' to:
   => 'post.next.date'
 
-Codes are based on [JekyllBoostrap][http://jekyllbootstrap.com/].
+Codes are based on [JekyllBoostrap](http://jekyllbootstrap.com/).
