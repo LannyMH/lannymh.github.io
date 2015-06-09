@@ -10,7 +10,9 @@ twitter_username:
 github_username:  LannyMH
 
 # Build settings
-markdown: redcarpet
+markdown: Redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables","with_toc_data"]
 
 # Number of Pagination
 paginate: 5

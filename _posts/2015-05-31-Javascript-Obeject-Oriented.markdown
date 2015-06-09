@@ -2,9 +2,11 @@
 layout: post
 title:  "Javascript Obeject Oriented Key Syntax"
 date:   2015-05-31
-tags: ['JavaScript']
+tags: ['JavaScript','Prototype Based Inheritance']
 ---
-JavaScript中基本的面向对象语法
+JavaScript中并没有类（class），而是采用了构造器（contructor）来实现类的某些功能。
+
+对象的继承（Inheritance）一般有三种，class-based, prototype-based（原型继承），和metaclass-based（基于元类）。
 
 ##New的使用
 * Using Constructor to Create an Object （用构造器创建对象）  
