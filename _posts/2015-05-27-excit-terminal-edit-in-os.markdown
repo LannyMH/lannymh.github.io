@@ -2,7 +2,6 @@
 layout: post
 title: Excit Terminal Edit in OS
 date:   2015-05-27
-categories : [OS Tips]
 tags : [OS Tips]
 ---
 

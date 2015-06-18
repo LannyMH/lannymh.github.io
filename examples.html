@@ -1,0 +1,10 @@
+---
+layout: page
+title: Examples
+---
+
+<ul class="post-list">
+  {% for example in site.examples %}
+    <li>{{ example.type }} &raquo; <a href="{{ BASE_PATH }}{{ example.url }}">{{ example.title }}</a></li>
+  {% endfor %}
+</ul>

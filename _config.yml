@@ -17,3 +17,14 @@ redcarpet:
 # Number of Pagination
 paginate: 5
 paginate_path: "page:num"
+
+# Collection
+collections:
+ examples:
+  output: true
+# defaults:
+#   - scope:
+#       path: ""
+#       type: examples
+#     values:
+#       layout: example

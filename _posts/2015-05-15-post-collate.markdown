@@ -67,9 +67,9 @@ tags: ['Jekyll','Liquid']
 
 如果想从旧到新排列所有Posts，
 
-1) Change the for loop to this:
+1. Change the for loop to this:
   => 'for post in site.posts reversed'
-2) Next make sure to change 'post.previous.date' to:
+2. Next make sure to change 'post.previous.date' to:
   => 'post.next.date'
 
 Codes are based on [JekyllBoostrap](http://jekyllbootstrap.com/).
