@@ -3,8 +3,20 @@ layout: page
 title: Examples
 ---
 
+<h3>Demo</h3>
 <ul class="post-list">
   {% for example in site.examples %}
-    <li>{{ example.type }} &raquo; <a href="{{ BASE_PATH }}{{ example.url }}">{{ example.title }}</a></li>
+  	{% if example.type == "Demo" %}
+    <li>{{ example.categories }} &raquo; <a href="{{ BASE_PATH }}{{ example.url }}">{{ example.title }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h3>Code Details</h3>
+<ul class="post-list">
+  {% for example in site.examples %}
+  	{% if example.type == "Code" %}
+    <li>{{ example.categories }} &raquo; <a href="{{ BASE_PATH }}{{ example.url }}">{{ example.title }}</a></li>
+    {% endif %}
   {% endfor %}
 </ul>
