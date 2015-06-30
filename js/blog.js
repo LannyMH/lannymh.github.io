@@ -1,5 +1,7 @@
 
 //Add Bootstrap table class to markdown tables
 ;(function($){
-	$(".post-content").find("table").addClass('table table-striped');
+	$(function(){
+		$(".post-content").find("table").addClass('table table-striped');
+	})
 })(jQuery);

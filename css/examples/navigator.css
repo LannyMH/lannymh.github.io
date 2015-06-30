@@ -1,0 +1,60 @@
+@charset utf-8
+
+#examples-navigator,
+#examples-navigator-no-js{
+	padding: 3px;
+}
+
+#examples-navigator li,
+#examples-navigator-no-js li{
+	list-style: none;
+	float:left;
+	border-right:1px solid #D0D0D0;
+}
+
+/* 将最后一个 li 元素的边框隐藏（上面设的）*/
+#examples-navigator li:last-child,
+#examples-navigator-no-js li:last-child{
+	border:0;
+}
+
+#examples-navigator li a,
+#examples-navigator-no-js li a{
+	padding: 10px;
+	border: 0;
+	font: 14px/1 Verdana;	
+	color:#a49e96;
+	text-decoration: none;
+}
+
+.no-js #examples-navigator li a:hover,
+.no-js #examples-navigator li a:focus,
+.no-js #examples-navigator li.examples-focus a,
+#examples-navigator-no-js li a:hover,
+#examples-navigator-no-js li a:focus,
+#examples-navigator-no-js li.examples-focus a,
+.examples-highlight {
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-moz-border-radius: 6px;		
+	border-radius: 6px;
+	box-shadow: 0px 0px 2px #69635a;
+	/* 渐变 */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#887963), to(#0b0a09));
+	background-image: -webkit-linear-gradient(-90deg, #887963, #0b0a09);
+	background-image: -moz-linear-gradient(-90deg, #887963, #0b0a09);
+	background-image: -o-linear-gradient(-90deg, #887963, #0b0a09);
+	background-image: -ms-linear-gradient(-90deg, #887963, #0b0a09);	
+	background-image: linear-gradient(-90deg,#887963,#0b0a09); /* 90 度方向，从X颜色到Y颜色渐变*/	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#776a57', endColorstr='#12100e',GradientType=0 );/* IE6-9 */ 
+}
+
+/* ///////////////////////////////////////// 
+	=Global Classes
+///////////////////////////////////////// */
+
+.example-clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}

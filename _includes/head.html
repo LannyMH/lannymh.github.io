@@ -16,8 +16,13 @@
   {% if page.css %}
   <link rel="stylesheet" href="{{site.baseurl}}/css/examples/{{page.css}}.css">
   {% endif %}
+  {% if page.less %}
+  <link rel="stylesheet/less" href="{{site.baseurl}}/css/examples/{{page.less}}.less">
+  {% endif %}
 
   <!--others-->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <!--浏览器兼容性检查-->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
 </head>

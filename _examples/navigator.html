@@ -1,0 +1,35 @@
+---
+layout: example
+title: Dynamic Navigator
+type: Demo
+categories: ['HTML5+CSS3']
+css: navigator
+plugin: jquery.navigator
+js: navigator
+---
+
+<p>
+	如果页面支持JavaScript, 则使用jQuery来实现动态效果，如果JS未启用，则使用CSS来实现
+</p>
+
+jQuery:
+<nav id="examples-navigator">
+	<ul class="examples-clearfix">
+		<li class="examples-focus"><a href="{{ site.baseurl }}/">Homepage</a></li>
+		<li><a href="#">Post</a></li>
+		<li><a href="#">Examples</a></li>
+		<li><a href="#">Link</a></li>
+	</ul>
+</nav>
+<br/>
+<br/>
+CSS:
+<nav id="examples-navigator-no-js">
+	<ul class="examples-clearfix">
+		<li><a href="{{ site.baseurl }}/">Homepage</a></li>
+		<li><a href="#">Post</a></li>
+		<li><a href="#">Examples</a></li>
+		<li><a href="#">Link</a></li>
+	</ul>
+</nav>
+

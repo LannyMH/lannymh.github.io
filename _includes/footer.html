@@ -54,11 +54,19 @@
 
 </footer>
 
+{% if page.less %}
+<!--Less CDN-->
+<script src="http://cdn.bootcss.com/less.js/1.7.0/less.min.js"></script>
+{% endif %}
 <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<!--浏览器兼容性检查-->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+<!-- <script src="{{site.baseurl}}/js/main.js"></script> -->
 <script src="{{site.baseurl}}/js/blog.js"></script>
+{% if page.plugin %}
+<script src="{{site.baseurl}}/js/plugin/{{page.plugin}}.js"></script>
+{% endif %}
 {% if page.js %}
 <script src="{{site.baseurl}}/js/examples/{{page.js}}.js"></script>
 {% endif %}
+
+
