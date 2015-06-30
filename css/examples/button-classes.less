@@ -1,0 +1,38 @@
+@charset utf-8;
+
+/* 
+ *	Less Functions
+ */
+
+//外部阴影
+.box-shadow(@x:1px, @y:1px, @blur:0px, @color: #212121){
+	-webkit-box-shadow:@arguments;
+	-moz-box-shawdow:@arguments;
+	box-shadow: @arguments;
+}
+
+//内部阴影
+.inset-box-shadow(@x:1px, @y:1px, @blur:0px, @color: #212121){
+	-webkit-box-shadow:inset @x @y @blur @color;
+	-moz-box-shawdow:inset @x @y @blur @color;
+	box-shadow: inset @x @y @blur @color;
+}
+
+//渐变
+//@bs：开始颜色，@be：结束颜色
+.button-gradient(@bgc:#e5e5e5, @img_url:none, @bs: #fff, @be:#cecece){
+	background-color: @bgc;
+	background-image: @img_url, @img_url, -webki-gradient(linear, left top, left bottom, from(@bs), to(@be));
+	background-image: @img_url, @img_url, -moz-linear-gradient(@bs,@be);
+	background-image: @img_url, @img_url, -o-linear-gradient(@bs,@be);
+	background-image: @img_url, @img_url, -ms-linear-gradient(@bs,@be);
+	background-image: @img_url, @img_url, linear-gradient(@bs,@be);
+}
+
+//圆角
+.border-radius(@radius:8px){
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	-khtml-border-radius:@radius;
+	border-radius:@radius;
+}
