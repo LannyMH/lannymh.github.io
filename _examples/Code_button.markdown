@@ -1,59 +1,25 @@
-@charset utf-8;
-@import "button-classes.less";
+---
+layout: example
+title: Buttons
+type: Code
+categories: ['HTML5+CSS3']
+---
 
-//Less Variables
-@wrap_width:80%;
+[Live Demo](/examples/button.html)
 
-@red_bc:#e80408;
-@red_ec:#6d0019;
+####使用CSS来美化&lt;a&gt;，使其看上去像按钮
 
-@orange_bc: #ffa13d;
-@orange_ec: #a04814;
+1. 使用 padding: xxxem xxxem + font-size来设置按钮大小
+2. 给按钮加上背景色，阴影，边框
+3. 给 a:hover a:focus加上另一种颜色，设计出高亮效果
 
-@yellow_bc: #fff496;
-@yellow_ec: #e5c600;
-
-@green_bc: #aefc6f;
-@green_ec: #4c6e1b;
-
-@blue_bc: #4FA7FF;
-@blue_ec: #0549A8;
-
-@navy_bc: #5064D3;
-@navy_ec: #281D6D;
-
-@purple_bc: #CC78ED;
-@purple_ec: #4B1166;
-
-@pink_bc: #FC679B;
-@pink_ec: #AA054A;
-
-a:link, a:visited{
-	color:#4a4a4a;
-	text-decoration: none;
-}
-
-a:hover, a:active{
-	color:#7b7b7b;
-}
-
-#examples-button-wrap{
-	position: absolute;
-	text-align: center;
-	width: @wrap_width;
-	margin: 50px (100% - @wrap_width)/2 0 0;
-	border:1px solid #f8f8f8;
-	padding: 40px;
-	.box-shadow(0px,0px,4px,#787878);
-	background:#e7e7e7;
-	background:rgba(237, 237, 237, 0.5);
-}
-
+```css
+/* LESS 代码 */
 .examples-button{
-	text-decoration: none !important; //不受内嵌css影响
-	cursor: pointer; //行内元素
+	text-decoration: none !important; //加上!important使其不受内嵌css影响
+	cursor: pointer; //设置指针为手指
 	border: 1px solid #ccc;
-	padding: 1em 1.5em; 
+	padding: 1em 1.5em;  //根据字体大小来变化按钮大小
 	background-color: #e0e0e0;
 	color:#232323;
 	font: 14px/1 Verdana, Arial;
@@ -61,7 +27,7 @@ a:hover, a:active{
 	.inset-box-shadow(0px,0px,4px,#787878); //使用内阴影
 	.button-gradient; //渐变
 
-	//添加&来支持嵌套与扩展
+	//添加 & 来支持嵌套与扩展
 	&:hover,&:focus{ 
 		outline: 0;
 		.button-gradient(#eee,none,#fff,#c0c0c0);
@@ -79,7 +45,7 @@ a:hover, a:active{
 	&.examples-rounder{.border-radius(15px);}
 	&.examples-roundest{.border-radius(30px);}
 
-	//颜色扩展类
+	//颜色扩展类，包括其hover与focus变化
 	&.examples-red {
 		border: 1px solid #8C484F; 
 		color: #121212 !important;
@@ -152,8 +118,42 @@ a:hover, a:active{
 		}
 	}
 }
+```
 
+####使用到的Less函数，能自动生成不同浏览器的前缀
 
+```css
+/* LESS 函数 */
+//外部阴影
+.box-shadow(@x:1px, @y:1px, @blur:0px, @color: #212121){
+	-webkit-box-shadow:@arguments;
+	-moz-box-shawdow:@arguments;
+	box-shadow: @arguments;
+}
 
+//内部阴影
+.inset-box-shadow(@x:1px, @y:1px, @blur:0px, @color: #212121){
+	-webkit-box-shadow:inset @x @y @blur @color;
+	-moz-box-shawdow:inset @x @y @blur @color;
+	box-shadow: inset @x @y @blur @color;
+}
 
+//渐变
+//@bs：开始颜色，@be：结束颜色
+.button-gradient(@bgc:#e5e5e5, @img_url:none, @bs: #fff, @be:#cecece){
+	background-color: @bgc;
+	background-image: @img_url, @img_url, -webki-gradient(linear, left top, left bottom, from(@bs), to(@be));
+	background-image: @img_url, @img_url, -moz-linear-gradient(@bs,@be);
+	background-image: @img_url, @img_url, -o-linear-gradient(@bs,@be);
+	background-image: @img_url, @img_url, -ms-linear-gradient(@bs,@be);
+	background-image: @img_url, @img_url, linear-gradient(@bs,@be);
+}
 
+//圆角
+.border-radius(@radius:8px){
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	-khtml-border-radius:@radius;
+	border-radius:@radius;
+}
+```

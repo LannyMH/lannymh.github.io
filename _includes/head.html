@@ -16,9 +16,6 @@
   {% if page.css %}
   <link rel="stylesheet" href="{{site.baseurl}}/css/examples/{{page.css}}.css">
   {% endif %}
-  {% if page.less %}
-  <link rel="stylesheet/less" href="{{site.baseurl}}/css/examples/{{page.less}}.less">
-  {% endif %}
 
   <!--others-->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

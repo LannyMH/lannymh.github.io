@@ -1,19 +1,25 @@
-@charset "utf-8";
+---
+layout: example
+title: Gradient Background
+type: Code
+categories: ['HTML5+CSS3']
+---
 
+###Gradient Background Less code
 
-.example1-gradient{
-	.rainbow-gradient(-45deg, gold, maroon, snow, black, gold, maroon, snow, black, gold);
-	height: 300px;
-	width: 100%;
-}
+[Live Demo](/examples/gradient_background.html)
 
+* Less function to create gradient for different browser engines.
+
+```css
 .example2-gradient{
 	.rainbow-gradient(45deg, red, orange, yellow, green, blue, darkblue, purple, pink, red);
 	height: 300px;
 	width: 100%;
 }
+```
 
-//Less function
+```css
 .rainbow-gradient(
 		@deg: 0deg,
 		@c1: red,
@@ -110,3 +116,4 @@
 			@c1 100%
 		); 
 }
+```

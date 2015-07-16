@@ -1,0 +1,43 @@
+---
+layout: example
+title: Fancy Form 
+type: Demo
+categories: ['HTML5+CSS3']
+css: form
+js: form
+---
+
+<div id="example-form-wrap">
+	<h2 title="Registration">Registration</h2>
+	<form id="example-reg-form" method="post" action="#">
+		<p>
+			<label for="exmaple-f-name">Name</label>
+			<input id="exmaple-f-name" name="exmaple-f-name" type="text" placeholder="Name" required />
+		</p>
+		<p>
+			<label for="exmaple-f-phone">Phone</label>
+			<input id="exmaple-f-phone" name="exmaple-f-phone" type="tel" placeholder="Phone" required />
+		</p>
+		<p>
+			<label for="exmaple-f-email">Email</label>
+			<input id="exmaple-f-email" name="exmaple-f-email" type="email" placeholder="Email" required />
+		</p>
+		<p>
+			<label for="exmaple-f-website">Website</label>
+			<input id="exmaple-f-website" name="exmaple-f-website" type="url" placeholder="WebSite" />
+		</p>
+		<p>
+			<label for="exmaple-f-password">Password</label>
+			<input id="exmaple-f-password" name="exmaple-f-password" type="password" placeholder="Password" required />
+		</p>
+		<p>
+			<input id="exmple-f-terms" name="exmple-f-terms" type="checkbox" />
+			<lable for="exmple-f-terms">
+				I agree with this <strong><a href="#" target="_blank" rel="external">term</a></strong>!
+			</label>
+		</p>
+		<p id="exmple-submit-wrap">
+			<button type="submit" id="exmple-f-submit" title="Submit">+</button>
+		</p>
+	</form>
+</div>
