@@ -15,14 +15,14 @@ categories: ['HTML5+CSS3']
 	<!--标签部分-->
 	<nav class="examples-tabs-menu examples-clearfix">
 		<ul>
-			<li><a>标签A</a></li>
+			<li><a href="#IDA">标签A</a></li>
 			....
 		</ul>
 	</nav>
 	<!--内容部分-->
 	<div class="examples-tabs-content">
 		<ul>
-			<li>
+			<li id="IDA">
 				<h3>内容题目</h3>
 				<p>具体内容</p>
 			</li>
@@ -34,7 +34,7 @@ categories: ['HTML5+CSS3']
 
 ####CSS设计
 
-标签部分
+* 标签部分
 
 1. 设置li的float使其水平对齐
 2. 给a添加padding使其变大
@@ -70,7 +70,7 @@ categories: ['HTML5+CSS3']
 }
 ```
 
-内容部分
+* 内容部分
 
 1. 外层div加上padding, 背景色，以及min-height，并设置position为relative
 2. 给每一个li加上border与margin，并设置min-height
@@ -109,7 +109,35 @@ categories: ['HTML5+CSS3']
 	z-index: 10px;
 }
 ```
+
 ####jQery部分
+
+1. 设计一个可以初始化显示标签页的变量, 第一次打开时，向其内容与标签添加active class
+2. 给标签中的&lt;a&gt;添加点击事件，删除所有acitve class，给选中项添加active class
+3. 添加动画效果
+
+```javascript
+//将选项卡标签与内容捆绑，一起添加active class
+$menu.add($contents).find('li:nth-child(' + options.start_index + ')').addClass('active');
+
+//点击事件，激活某个选项卡
+$menu_a.click(function(e){
+
+	var $this = $(this),
+			target = $this.attr('href'); //href里保存了相应的examples-tabs-content li的id
+
+	$menu_li.removeClass('active');
+	$this.parent().addClass('active');
+
+	//fadeTo中的0与1是指opacity, 需要CSS支持opacity与transition
+	$contents.find('li').fadeTo(options.transition_time,0,function(){
+		$(this).removeClass('active').filter(target).addClass('active').fadeTo(options.transition_time, 1);
+	});
+
+	e.preventDefault(); //阻止默认的链接跳转动作
+});
+```
+
 
 
 
