@@ -1,0 +1,92 @@
+---
+layout: post
+title:  "CSS Tips"
+date:   2015-08-13
+tags: [CSS]
+---
+
+持续更新...
+
+## em与px
+
+1. em与px都是长度单位
+	* em是相对于font-size的大小，例如font-size:16px，0.75em 即为 0.75*16px = 12px
+	* px即像素
+2. em与弹性设计
+	* 所有的现代浏览器中字体的默认大小都为16px
+	* 使用em代替px可以动态的根据字体大小而更新容器的padding，margin等，实现弹性设计
+
+[Sample Link](/examples/form.html)
+
+```css
+/* 设置为em，让其可以根据字体大小变化 */
+#example-form-wrap{
+	width: 20em;
+	padding: 0.9em 0.5em 0.9em 2.5em;
+}
+```
+
+##设计一个在任何浏览器都能运行的页面                                                                        
+
+对于不同的浏览器，一般可以归纳为以下三种，
+
+1. 支持HTML5与CSS3
+2. 只支持HTML与CSS，但支持JavaScript
+3. 只支持HTML与CSS
+
+在开发新的页面时，需要把上述三种情形都考虑进去，即使某些显示的效果与排版会不同，但页面内容要能够实现基本的可浏览功能。
+
+1. CSS3，HTML5，JavaScript检测 - 使用[Modernizr](http://modernizr.com/)
+2. 如果支持CSS3与HTML5，则使用新特性来实现页面功能。
+3. 如果不支持CSS3与HTML5，则使用JavaScript(jQuery)来替代
+4. 如果JavaScript也不支持，则去掉特效，使用最基本的布局来满足可浏览的功能。
+	* 如在[Tab Panel](/examples/tabpanel.html)中，如果JS，HTML5与CSS3都不支持，每个标签页的内容会从上到下一起显示出来。
+	* 如在[Form](/examples/form.html)中，如果JS，HTML5与CSS3都不支持，每个字段的名字会显示在字段的左侧，而不是在每个文本框内。
+
+##不同的浏览器前缀
+
+1. Safari: -webkit-
+2. Mozilla: -moz-
+3. IE: -ms-
+4. Opera: -o-
+
+##浏览器hack
+
+加入某些特殊的代码来控制css在某种特定的浏览器（IE6,7, Mozilla）中显示的样式，常见的有，
+
+1. !important - 区别IE6或者IE7
+	* IE7：可以识别
+	* IE6：不能识别
+2. * （星号） - 区别IE与其他浏览器
+	* IE：可以识别
+	* Mozilla，Chrome：不能识别
+3. _ （下划线） - 区别IE6与其他浏览器
+	* 只有IE6支持
+
+举例，如果要在Chrome, Mozilla，IE8中显示红色，IE7显示绿色，IE6黄色，CSS代码如下, 写hack的顺序为正常CSS代码, IE7, IE6 
+
+```css
+.hackTest_A{
+	color: red; 						 /* Chrome Mozilla IE8 */
+	color: green !important; /* IE7 */
+	_color: yellow; 				 /* IE6 */
+}
+
+/* 另一种写法 */
+.hackTest_B{
+	color: red;	 						 /* Chrome Mozilla IE8 */
+	*color: green; /* IE7 */
+	_color: yellow; 				 /* IE6 */
+}
+
+/* 另一种写法 */
+.hackTest_C{
+	color: red;	 						 /* Chrome Mozilla IE8 */
+	color: green !important; /* IE7 */
+	*color: yellow; 				 /* IE6 */
+}
+```
+
+
+
+
