@@ -1,0 +1,92 @@
+
+.container{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.center{margin: 0 auto;} /* 上下为0，左右为自动*/
+
+.row{
+	overflow: hidden;
+	width: 100%;
+	max-width: 1140px;
+	min-width: 755px;
+	margin: 0 auto 2%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
+	float:left;
+	margin-right: 3.8%;
+	min-height: 1px;
+	margin-bottom: 2%;
+}
+
+.row .col-1  { width: 4.85%;  } /* (100 - 3.8 * 11)/12 = 4.85 */
+.row .col-2  { width: 13.45%; } /* (100 - 3.8 * 5)/6 = 13.5 */
+.row .col-3  { width: 22.05%; }	/* (100 - 3.8 * 3)/4 = 22.15 */
+.row .col-4  { width: 30.75%; } /* (100 - 3.8 * 2)/3 = 22.15 */
+.row .col-5  { width: 39.45%; } /* (100 - 3.8 * 2)/3 = 30.8 */
+.row .col-6  { width: 48%; 		} /* (100 - 3.8 * 1)/2 = 48.1 */
+.row .col-7  { width: 56.75%; } /* (100 - 39.45 - 3.8) = 56.75 */
+.row .col-8  { width: 65.4%; 	} /* (100 - 30.75 - 3.8) = 65.4 */
+.row .col-9  { width: 74.05%; } /* ... */
+.row .col-10 { width: 82.7%; 	} /* ... */
+.row .col-11 { width: 91.35%; } /* ... */
+.row .col-12 { width: 100%; 	} /* ... */
+
+.last{margin-right: 0;}
+[class^=col]>:first-child {margin-top: 0;}
+
+.fr {float:right;}
+
+.demo-big-font{
+	background-color: #3c3b34;
+	font: 32px/150px Verdana;
+	color:white;
+	text-align: center;
+	height: 150px;
+}
+
+.demo-sm-font{
+	background-color: #3c3b34;
+	font: 20px/150px Verdana;
+	color:white;
+	text-align: center;
+	height: 150px;
+}
+
+/* Tablet Size: 1024 以下 */
+@media only screen and (max-width: 1024px) {
+
+	body {
+		font-size: 0.8em;
+		line-height: 1.5;
+	}
+	
+}
+
+
+/* Mobile Size: 767px 以下 */
+@media handheld, only screen and (max-width: 767px) {
+
+	body { font-size: 16px; }
+	
+	.row, body, .container {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	.row .col-1, .row .col-2, .row .col-3, .row .col-4, .row .col-5, .row .col-6, 
+	.row .col-7, .row .col-8, .row .col-9, .row .col-10, .row .col-11, .row .col-12 {
+		float: none;
+		width: auto;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}

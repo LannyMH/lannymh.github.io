@@ -17,7 +17,9 @@
            <li {% if page.title == p.title %}class="active" {% endif %} ><a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a></li>
           {% endif %}
         {% endfor %}
+        <li><a href="/grid.html">Grid Demo</a></li>
       </ul>
+
      <!--  <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">

@@ -86,6 +86,12 @@ tags: [CSS]
 	*color: yellow; 				 /* IE6 */
 }
 ```
+ 
+##rgb, rgba, Filter
+
+* rgb: rgb(125,125,125)。
+* rgba: rgba(125,125,125, 0.5) 带透明度。
+* Filter: 在IE8之前的版本，并不支持RGB与rgba，只能使用Filter。
 
 
 
