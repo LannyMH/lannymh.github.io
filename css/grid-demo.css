@@ -1,8 +1,7 @@
-/* 平板 */
-@import "/css/normalize.css";
-
-@import "/css/grid.css";
 @charset utf-8;
+@import "/css/normalize.css";
+@import "/css/response.css";
+
 body {
   font: 14px/1.5 Georgia Serief;
 }
